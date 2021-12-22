@@ -2,8 +2,6 @@ import { config } from "dotenv";
 
 config();
 
-console.log(config());
-
 export default {
   fireBase: {
     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
