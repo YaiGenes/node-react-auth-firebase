@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { AuthProvider } from "../context/AuthContext";
 import SignUp from "./SignUp";
-import Dashboard from "./Dashboard";
+//import Dashboard from "./Dashboard";
 import Login from "./Login";
+import PrivateRouter from "./PrivateRouter";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Router>
           <AuthProvider>
             <Routes>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/" element={<PrivateRouter />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/login" element={<Login />} />
             </Routes>
